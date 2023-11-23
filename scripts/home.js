@@ -17,5 +17,5 @@ if (Object.keys(currentUser).length !== 0) {
 
 logoutBtn.addEventListener('click', function () {
   localStorage.removeItem(KEY_CURRENTUSER);
-  window.location.href = '../index.html';
+  window.location.href = './index.html';
 });
