@@ -16,8 +16,7 @@ User.getJSON = async function () {
     let newsContainer = document.getElementById('news-body');
     newsContainer.innerHTML = '';
     //const resNews = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&pageSize=${pageSize}&page=${page}&apiKey=9ddea5b4c23d41fab68d0e9779d87815`
-    );
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&pageSize=${pageSize}&page=${page}&apiKey=9ddea5b4c23d41fab68d0e9779d87815`);
     const resNews = await fetch(
       `https://newsapi.org/v2/top-headlines?country=us&category=general&pageSize=10&page=1&apiKey=9ddea5b4c23d41fab68d0e9779d87815`
     );
