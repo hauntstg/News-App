@@ -15,9 +15,13 @@ User.getJSON = async function () {
   try {
     let newsContainer = document.getElementById('news-body');
     newsContainer.innerHTML = '';
-    const resNews = await fetch(
+    //const resNews = await fetch(
       `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&pageSize=${pageSize}&page=${page}&apiKey=9ddea5b4c23d41fab68d0e9779d87815`
     );
+    const resNews = await fetch(
+      `https://newsapi.org/v2/top-headlines?country=us&category=general&pageSize=10&page=1&apiKey=9ddea5b4c23d41fab68d0e9779d87815`
+    );
+    
     const dataNews = await resNews.json();
 
     // Hàm phân trang, VD: Math.ceil(3.1) => 4, Math.ceil(dataNews.totalResults / pageSize) => sẽ là số lượng trang tối đa
